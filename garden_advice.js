@@ -1,6 +1,10 @@
 // Garden advice program that provides gardening tips based on the user's input.
 
 function getGardeningAdvice(plantType) {
+  if (typeof plantType !== "string" || plantType.trim() === "") {
+    return "Please enter a valid plant type.";
+  }
+
   plantType = plantType.toLowerCase();
 
   if (plantType === "vegetables") {
